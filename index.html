@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Population Projection Vizualization</title>
+        <link rel="stylesheet"
+            href="static/css/style.css">
+    </head>
+
+    <body class="hidden">
+        <div class="overlay show">
+            <p>Currently fetching data...</p>
+            <p>This vizualization is optimized for min screen pixel-width of 1200px.</p>
+        </div>
+
+        <div id="chart">
+            <div class="wrapper">
+                <h1 id="title">Visualizing <span>Population Projection</span> across the European Union</h1>
+                <p>Current population: <span id="totalPop">429,219,942</span></p>
+                <p>Current year: <span id="currentYear">1990</span></p>
+                <div id="btns">
+                    <button id="start" title="Jump back to 1990">&larrb;</button>
+                    <button id="back5" title="Step back 5 years">&Larr;</button>
+                    <button id="back" title="Step back a year">&larr;</button>
+                    <button id="stop" title="Pause timeline">&par;</button>
+                    <button id="fwd" title="Forward a year">&rarr;</button>
+                    <button id="fwd5" title="Forward 5 years">&Rarr;</button>
+                    <button id="end" title="Jump to 2100">&rarrb;</button>
+                </div>
+            </div>
+            <div id="map">
+                <div id="map-tooltip">
+                    <h2 id="map-tooltip--country"></h2>
+                    <div>
+                        <p>Population in <span id="map-tooltip--year"></span> is <span id="map-tooltip--pop"></span>.</p>
+                        <p id="comparison">This is <span id="map-tooltip--perc"></span>% <span id="map-tooltip--rate"></span> than in 2020.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+        <script src="https://d3js.org/d3-queue.v3.min.js"></script>
+        <script src="https://unpkg.com/topojson@3"></script>
+
+        <script src="static/js/pviz_map.js"></script>
+        <script src="static/js/pviz_core.js"></script>
+        <script src="static/js/pviz_main.js"></script>
+    </body>
+
+</html>
