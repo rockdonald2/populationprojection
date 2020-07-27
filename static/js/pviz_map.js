@@ -101,7 +101,9 @@
     };
 
     const updateDisplay = function () {
-        d3.select('#currentYear').text(pviz.CURRENTYEAR != 2101 ? pviz.CURRENTYEAR : pviz.CURRENTYEAR - 1);
+        if (pviz.CURRENTYEAR == 2101) return;
+
+        d3.select('#currentYear').text(pviz.CURRENTYEAR);
 
         let popArray = [];
         for (const k of KEYS) {
