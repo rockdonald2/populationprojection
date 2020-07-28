@@ -22,6 +22,7 @@ body {
     width: 120rem;
     margin: 0 auto;
     margin-top: 9vh;
+    position: relative;
 }
 
 #map {
@@ -158,4 +159,13 @@ body {
         transform: translateX(0);
         opacity: 1;
     }
+}
+
+#source {
+    font-size: 1.2rem;
+    opacity: .5;
+    color: #666;
+    position: absolute;
+    left: 0;
+    bottom: 2%;
 }

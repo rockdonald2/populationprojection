@@ -16,7 +16,8 @@ body {
   height: 90vh;
   width: 120rem;
   margin: 0 auto;
-  margin-top: 9vh; }
+  margin-top: 9vh;
+  position: relative; }
 
 #map {
   width: 100%;
@@ -107,3 +108,11 @@ body {
   .overlay.show {
     transform: translateX(0);
     opacity: 1; }
+
+#source {
+  font-size: 1.2rem;
+  opacity: .5;
+  color: #666;
+  position: absolute;
+  left: 0;
+  bottom: 2%; }

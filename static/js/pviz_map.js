@@ -170,11 +170,11 @@
                 d3.select('#map-tooltip--perc').text(Math.abs((perc * 100).toPrecision(4)));
                 d3.select('#map-tooltip--rate').attr('class', rate).text(rate);
 
-                const mouseCoords = d3.mouse(d3.select('body').node());
+                const mouseCoords = d3.mouse(d3.select('#chart').node());
                 const w = parseInt(tooltip.style('width'));
                 const h = parseInt(tooltip.style('height'));
 
-                tooltip.style('top', (mouseCoords[1] - h / 2) + 'px');
+                tooltip.style('top', (mouseCoords[1] - h * 1.5) + 'px');
                 tooltip.style('left', (mouseCoords[0] - w / 2) + 'px');
             })
             .on('mouseout', function (d) {
